@@ -1,7 +1,7 @@
 #!bin/bash
 
-NUMBER=$1
-NUMBER=$2
+NUMBER1=$1
+NUMBER2=$2
 
 #shell automatically consider data types 
 #no need to specify particulary whther it is int or any other
