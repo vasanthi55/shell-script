@@ -24,4 +24,14 @@ else
    echo "Installed mysql succesfully"    
 fi                  
 
+# for ex: if i wantvto install multiple packages i need to give same as above multiple times
 
+
+yum install git -y 
+
+if [ $? -ne 0 ]  
+then
+   echo "ERROR : installing git is fail"
+else
+   echo "Installed git succesfully"    
+fi                
