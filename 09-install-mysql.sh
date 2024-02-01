@@ -14,7 +14,7 @@ else
    echo "You are root user"
 fi
 
-yum install mysqlll -y # and also here we should not stop just by giving install
+yum install mysql -y # and also here we should not stop just by giving install
                      #  to check whether it installed properly or not #though "$? = 0 to success"
 
 if [ $? -ne 0 ]  
