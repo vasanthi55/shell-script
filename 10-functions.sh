@@ -29,11 +29,11 @@ fi
 
 yum install mysql -y
 
-VALIDATE $? " installed mysql" #passing argument $? that gives the mysql exit status and to show what we did like mysql installed
+VALIDATE $? "mysql" #passing argument $? that gives the mysql exit status and to show what we did like mysql installed
 
 yum install git -y
 
-VALIDATE $? " installed git"
+VALIDATE $? "git"
 
 # we have called function in starting to work that here last we call the function name to work
 #it is very imp to give some inputs. to functions also we give inputs through arguments
