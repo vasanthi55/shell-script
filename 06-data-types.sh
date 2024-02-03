@@ -11,4 +11,10 @@ SUM=$(($NUMBER1+$NUMBER2))
 
 echo "Total value : $SUM"
 
+echo "how many args passed: $N"
+
+echo "All args passed: $@"
+
+echo "script name: $0"
+
 #here taking another variable SUM and adding numbers
