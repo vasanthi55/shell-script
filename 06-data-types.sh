@@ -8,7 +8,7 @@ NUMBER2=$2
 #if enter text instead of number while dng sum it gives  zero value
 
 
-sum=$(($NUMBER1 + $NUMBER2))
+$SUM=$(($NUMBER1+$NUMBER2))
 
 
 echo "Total value : $SUM"
