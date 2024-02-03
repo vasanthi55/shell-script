@@ -7,6 +7,7 @@ VALIDATE(){ #function name is validate here.WHich one we think the code repeatin
     if [ $? -ne 0 ]
 then 
   echo "ERROR: installing  failed"
+  exit 1
 else
   echo "Installing success"
 fi
