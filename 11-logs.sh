@@ -18,7 +18,7 @@ then
   echo -e "$N ERROR:  $2 installing $R failed $N" # echo "-e" to add color
   exit 1
 else
-  echo -e " $2 Installing $G success $N"
+  echo -e " $2 /e[31m Installing $G success $N"
 fi
     
 }
