@@ -6,7 +6,7 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
 
 R="/e[31m"
-G="/e[32"
+G="/e[32m"
 N="/e[0m"
 
 VALIDATE(){ 
@@ -22,10 +22,10 @@ fi
 
 if [ $ID -ne 0 ]
 then
-  echo -e "ERROR:$R Run this script with root access"
+  echo -e "$N ERROR:$R Run this script with root access"
 exit 1
 else
-  echo -e $G"proceed you are root user"
+  echo -e "$G proceed you are root user"
 fi
 
 yum install mysql -y &>> $LOGFILE
