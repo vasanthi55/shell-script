@@ -10,23 +10,25 @@ N="/e[0m"
 
 LOGFILE="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
 
+echo "script started executing at $TIMESTAMP &>> $LOGFILE"
+
 VALIDATE(){ 
     if [ $1 -ne 0 ]
 then 
-  echo -e "$N ERROR:  $2 installing $R failed" # echo "-e" to add color
+  echo -e "$N ERROR:  $2 installing $R failed $N" # echo "-e" to add color
   exit 1
 else
-  echo -e " $2 Installing $G success"
+  echo -e " $2 Installing $G success $N"
 fi
     
 }
 
 if [ $ID -ne 0 ]
 then
-  echo -e "$N ERROR:$R Run this script with root access"
+  echo -e "$N ERROR:$R Run this script with root access $N"
 exit 1
 else
-  echo -e "$G proceed you are root user"
+  echo -e "$G proceed you are root user $N"
 fi
 
 yum install mysql -y &>> $LOGFILE
