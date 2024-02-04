@@ -3,7 +3,7 @@
 ID=$(id -u)
 
 TIMESTAMP=$(date+%F-%H-%M-%S)
-LOGFile="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
+LOGFILE="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
 VALIDATE(){ 
     if [ $1 -ne 0 ]
 then 
