@@ -2,7 +2,8 @@
 
 ID=$(id -u)
 
-echo "script name: $0" # to show script name we use $0
+TIMESTAMP=$(date+%F-%H-%M-%S)
+LOGFile="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
 VALIDATE(){ 
     if [ $1 -ne 0 ]
 then 
@@ -22,11 +23,11 @@ else
   echo "proceed you are root user"
 fi
 
-yum install mysql -y
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "mysql" #passing argument $? that gives the mysql exit status and to show what we did like mysql installed
 
-yum install git -y
+yum install git -y &>> $LOGFILE
 
 VALIDATE $? "git"
 
