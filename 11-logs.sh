@@ -3,16 +3,17 @@
 ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
 
 R="/e[31m"
 G="/e[32m"
 N="/e[0m"
 
+LOGFILE="/tmp/$0-$TIMESTAMP.log" # to show script name we use $0
+
 VALIDATE(){ 
     if [ $1 -ne 0 ]
 then 
-  echo -e "ERROR:  $2 installing $R failed" # echo "-e" to add color
+  echo -e "$N ERROR:  $2 installing $R failed" # echo "-e" to add color
   exit 1
 else
   echo -e " $2 Installing $G success"
