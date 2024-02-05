@@ -5,10 +5,10 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%S-%M)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-R="/e[31m"
-G="/e[32m"
-N="/e[0m"
-Y="/e[33m"
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
 
 echo " $0 script started executing at $TIMESTAMP"
 
