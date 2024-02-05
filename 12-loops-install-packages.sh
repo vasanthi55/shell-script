@@ -13,7 +13,7 @@ Y="/e[33m"
 echo " $0 script started executing at $TIMESTAMP"
 
 VALIDATE(){
-    if[ $1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
         echo -e "$2 .. $R installion failed $N"
         exit 1
@@ -22,7 +22,7 @@ VALIDATE(){
     fi
 }
 
-if[ $ID -ne 0 ]
+if [ $ID -ne 0 ]
 then
     echo -e "$R Run this script with root user $N"
     exit 1
@@ -37,7 +37,7 @@ fi
 for package in $@
 do
     yum list installed $package   # check installed or not
-    if[ $? -ne 0] #if not install
+    if [ $? -ne 0] #if not install
     then
         yum install $package -y
         VALIDATE $? , " installing $package" #validation
