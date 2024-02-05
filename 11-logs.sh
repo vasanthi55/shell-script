@@ -18,7 +18,7 @@ then
   echo -e "$N ERROR:  $2 installing $R failed $N" # echo "-e" to add color
   exit 1
 else
-  echo -e " $2 /e[31m Installing $G success $N"
+  echo -e " $2 Installing $G success $N"
 fi
     
 }
@@ -31,7 +31,7 @@ else
   echo -e "$G proceed you are root user $N"
 fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysql -y &>> $LOGFILE #the output which comes we are sending it to logfile either success or failure
 
 VALIDATE $? "mysql" #passing argument $? that gives the mysql exit status and to show what we did like mysql installed
 
