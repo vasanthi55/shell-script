@@ -37,10 +37,10 @@ fi
 for package in $@
 do
     yum list installed $package   # check installed or not
-    if [ $? -ne 0] #if not install
+    if [ $? -ne 0 ] #if not install
     then
         yum install $package -y
-        VALIDATE $? , " installing $package" #validation
+        VALIDATE $? " installing $package" #validation
     else
        echo -e "$package is already installed..$Y SKIPPING $N"
     fi
