@@ -10,7 +10,7 @@ G="/e[32m"
 N="/e[0m"
 Y="/e[33m"
 
-echo "script started executing at $TIMESTAMP"
+echo " $0 script started executing at $TIMESTAMP"
 
 VALIDATE(){
     if[ $1 -ne 0 ]
