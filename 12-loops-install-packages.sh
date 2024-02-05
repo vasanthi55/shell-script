@@ -19,6 +19,7 @@ VALIDATE(){
         exit 1
     else    
         echo -e "$2 .. $G installation success $N"
+    fi
 }
 
 if[ $ID -ne 0 ]
