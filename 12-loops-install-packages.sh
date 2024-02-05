@@ -10,7 +10,7 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
-echo " $0 script started executing at $TIMESTAMP"
+echo " $0 script started executing at $TIMESTAMP" &>> $LOGFILE
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -36,10 +36,10 @@ fi
 
 for package in $@
 do
-    yum list installed $package   # check installed or not
+    yum list installed $package  &>> $LOGFILE  # check installed or not
     if [ $? -ne 0 ] #if not install
     then
-        yum install $package -y
+        yum install $package -y &>> $LOGFILE
         VALIDATE $? " installing $package" #validation
     else
        echo -e "$package is already installed..$Y SKIPPING $N"
