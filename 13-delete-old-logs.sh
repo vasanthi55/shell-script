@@ -1,5 +1,5 @@
 #!/bin/bash
-
+R="\e[31m"
 SOURCE_DIR="/tmp/shellscript-logs"
 
 if [ ! -d $SOURCE_DIR ] # ! - denotes opposite, here if source dir doesnt exit 
