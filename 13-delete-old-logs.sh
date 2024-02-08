@@ -8,7 +8,7 @@ then
 fi
 
 #in the directory find for files older than 14 i.e only log file extensions.
-FILES_To_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log") 
+FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +14 -name "*.log") 
 
 while IFS= read -r line #IFS=internal field seperator-read line by line
 do
