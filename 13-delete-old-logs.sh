@@ -14,7 +14,7 @@ while IFS=read -r line #IFS=internal field seperator-read line by line
 do
     echo "Deleting files:$line"
     
-    rm-rf $line
+    rm -rf $line
 
 done <<< $FILES_TO_DELETE
 
