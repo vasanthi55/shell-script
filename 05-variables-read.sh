@@ -9,3 +9,4 @@ echo "Please enter password"
 read -s PASSWORD
 
 
+#to hide -s while typing usrname & paswd
