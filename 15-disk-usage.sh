@@ -18,7 +18,9 @@ do
 
 done <<< $DISK_USAGE
 
-echo -e "Message:$message"
+echo -e "Message: $message"
+
+echo "$message" | mail -s "High disk usage" vasanthi.ankem@gmail.com
 
 #11th line-->$line=go line by libe go to fist line of the disk usage by cutting percentage symbol
 #12-->go to first line and give file to which it belongs to disk name and then 2nd one
