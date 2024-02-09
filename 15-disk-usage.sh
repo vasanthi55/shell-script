@@ -22,6 +22,8 @@ echo -e "Message: $message"
 
 echo "$message" | mail -s "High disk usage" vasanthi.ankem@gmail.com
 
+sh mail.sh "DevOps Team" "High Disk Usage" "$message" "vasanthi.ankem@gmail.com" "ALERT High Disk Usage"
+
 #11th line-->$line=go line by libe go to fist line of the disk usage by cutting percentage symbol
 #12-->go to first line and give file to which it belongs to disk name and then 2nd one
 
