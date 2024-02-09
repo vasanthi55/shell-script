@@ -24,4 +24,4 @@ echo -e "Message:$message"
 #12-->go to first line and give file to which it belongs to disk name and then 2nd one
 
 #"+="-->to not overwrite the second line .when second line comes it comes down not in the same line
-#+\n -->second line comes in next line
+#+\n -->second line comes in next line,gining -e to enable \n
