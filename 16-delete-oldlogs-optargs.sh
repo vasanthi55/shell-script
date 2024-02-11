@@ -33,3 +33,28 @@ do
         \?) echo "Invalid Options: -"$OPTARG"" >$2; USAGE; exit;;
     esac
 done
+
+
+**#------------------CHECKING ACTION ARGUMENT PROVIDED OR NOT---------------**
+
+if [ -z "$ACTION" ] 
+then
+    echo "ERROR:: -a option is mandatory. Either Delete or Archive"
+    exit 1
+fi
+
+**#---------------------CHECKING DESTINATION DIR PROVIDED IF ARCHIVE OPTION CHOOSEN---------------**
+
+if [ -z "$DESTINATION_DIR" ] && [ "$ACTION" == "arcive" ]
+then
+    echo "ERROR:: -d option is mandatory when -a is archive"
+    exit 1
+fi
+
+if [ ! -d $SOURCE_DIR ] # ! denotes opposite
+then
+    echo "Source directory: $SOURCE_DIR does not exists."
+fi
+
+**#-------------------------DELETE/ARCHIVE ACTION----------------------**
+
