@@ -58,3 +58,22 @@ fi
 
 **#-------------------------DELETE/ARCHIVE ACTION----------------------**
 
+if [ "$ACTION"=="delete" ]
+then
+FILES_TO_DELETE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
+
+while IFS= read -r line
+do
+    echo "Deleting file: $line"
+    rm -rf $line
+done <<< $FILES_TO_DELETE
+else
+FILES_TO_ARCHIVE=$(find $SOURCE_DIR -type f -mtime +"$DAYS" -name "*.log")
+
+while IFS= read -r line
+do
+    echo "Archiving file: $line"
+    zip -r "$DESTINATION_DIR/$(basename "$line").zip"
+    rm -rf $line
+done <<< $FILES_TO_ARCHIVE
+fi
