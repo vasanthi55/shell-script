@@ -24,3 +24,13 @@ while getopts ":n:w:h" opt; do
     esac
 
 done
+
+# if - z means empty: if name and wishes are empty then show error as below
+if [ -z $NAME ] || [ -z $WISHES ]
+then
+    echo "error:: both -n and -w are mandatory options"
+    USAGE
+    exit 1
+fi
+
+echo " hello $NAME. $WISHES, I am learning optargs passing to shellscript"
