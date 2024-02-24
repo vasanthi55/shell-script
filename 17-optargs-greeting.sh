@@ -17,11 +17,10 @@ while getopts ":n:w:h" opt; do
     case $opt in
         n) NAME="$OPTARG";;
         w) WISHES="$OPTARG";;
-        h|*) USAGE; exit;; # whenever above args not mentioned go to usage function to show and exit there
         \?) echo "Invalid option: -"$OPTARG"" >&2; USAGE;
             exit 1;;
-        : ) echo "Option -"$OPTARG" requires an argument." >&2
-            exit 1;;
+        :) USAGE; exit 1;;
+        h) USAGE; exit 1;; # whenever above args not mentioned go to usage function to show and exit there
     esac
 
 done
