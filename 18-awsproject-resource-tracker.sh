@@ -14,17 +14,19 @@
 # refer aws cli reference for all resource to list or launch or terminate.
 
 # listing s3 buckets 
+echo "list the s3 buckets"
 
 aws s3 ls
 
 # listing ec2 instances
 
-aws ec2 describe-instances
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstancesId'
+
 
 # listing lambda
 
-aws lambda list-functions
+#aws lambda list-functions
 
 # listing IAM users
 
-aws iam list-users
+#aws iam list-users
